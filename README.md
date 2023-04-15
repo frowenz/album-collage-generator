@@ -16,7 +16,7 @@ There are a few more examples below and even more examples [here](/more_examples
 
 ## Spotify API Keys
 
-To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API keys (client ID and secret key). Follow these steps to obtain your keys and set up the environment variables:
+To use ``album_cover_fetch.py``, you'll need to have your own Spotify API keys (client ID and secret key). Follow these steps to obtain your keys and set up the environment variables:
 
 1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications) and log in or create an account if you don't have one.
 
@@ -30,7 +30,6 @@ To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API k
         CLIENT_SECRET=your_client_secret_here
 
     The script will automatically load the client ID and secret key from the `.env` file.
-
 
 ## Usage
 
@@ -48,7 +47,7 @@ To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API k
 
     Replace `YOUR_CSV.CSV` with the path to your downloaded CSV file, and `NUM_THREADS` with the number of worker threads you'd like to use (6 is the default if unspecified). This will download all the album covers into a folder named `album_covers`.
 
-4. Once all your images are downloaded, it's a good idea to back them up, as the next script is destructive.
+4. Once all your images are downloaded, it's a good idea to back them up, as the next script is destructive. Occasionally, there might be duplicate albums covers. This mainly occurs when there exists both a regular and deluxe version of album.
 
 5. Run the following command to create the collage:
 
@@ -69,13 +68,6 @@ To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API k
         # Change Me:
 
 6. Your final output will be saved as `collage.jpg`.
-
-## Notes
-
-Occasionally, there might be duplicate albums covers. This mainly occurs when there exists both a regular and deluxe version of album.
-
-In order to get left and right sorting, you will have to poke around in the code. It is mostly a matter of uncommenting and commenting lines.
-
 ## Future Plans
 
 I plan on adding support for different outputs dimensions so wallpapers can be produced.
