@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
   table.custom-table {
     border-collapse: collapse;
     border: none;
@@ -7,7 +7,7 @@
     border: none;
     text-align: center;
   }
-</style>
+</style> -->
 
 <table class="custom-table">
     <tr>
