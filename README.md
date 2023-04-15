@@ -6,11 +6,11 @@ This is the product of a MAAD 26210 assignement where we were instructed to crea
   <img src="default.jpg" alt="collage" width="500">
 </p>
 
-A couple more examples: 
+There are a few more examples below and even more examples here [here](/more_examples/ALL_EXAMPLES.md).
 <p align="center">
   <img src="more_examples/hue_then_brightness.jpg" alt="collage" width="175">&nbsp;&nbsp; 
   <img src="more_examples/hue_reversed.jpg" alt="collage" width="175">&nbsp;&nbsp; 
-  <img src="more_examples/saturation_reversed.jpg" alt="collage" width="175">&nbsp;&nbsp; 
+  <img src="more_examples/brightness_then_saturation.jpg" alt="collage" width="175">&nbsp;&nbsp; 
   <img src="more_examples/saturation_then_hue.jpg" alt="collage" width="175">&nbsp;&nbsp; 
 </p>
 
@@ -34,19 +34,23 @@ To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API k
 
 ## Usage
 
-1. Download your last.fm data from [benjaminbenben.com/lastfm-to-csv](https://benjaminbenben.com/lastfm-to-csv/). This will generate a CSV file with the following columns:
+1. Download dependencies:
+
+        pip3 install pillow requests python-dotenv
+
+2. Download your last.fm data from [benjaminbenben.com/lastfm-to-csv](https://benjaminbenben.com/lastfm-to-csv/). This will generate a CSV file with the following columns:
 
         Artist, Album, Song, Time Scrobbled
 
-2. Run the following command to download album covers:
+3. Run the following command to download album covers:
 
         python3 album_cover_fetch.py YOUR_CSV.CSV NUM_THREADS
 
-    Replace `YOUR_CSV.CSV` with the path to your downloaded CSV file, and `NUM_THREADS` with the number of worker threads you'd like to use (6-8 threads is a recommended value). This will download all the album covers into a folder named `album_covers`.
+    Replace `YOUR_CSV.CSV` with the path to your downloaded CSV file, and `NUM_THREADS` with the number of worker threads you'd like to use (6 is the default if unspecified). This will download all the album covers into a folder named `album_covers`.
 
-3. Once all your images are downloaded, it's a good idea to back them up, as the next script is destructive.
+4. Once all your images are downloaded, it's a good idea to back them up, as the next script is destructive.
 
-4. Run the following command to create the collage:
+5. Run the following command to create the collage:
 
         python3 image_maker.py
 
@@ -60,11 +64,15 @@ To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API k
 
     If `--reverse` is specified, the images will be sorted in descending order.
 
-5. Your final output will be saved as `collage.jpg`.
+    By default, the images are arranged in a circular formation. If you want to arrange them from side to side or to double sort them (e.g., sort top to bottom by brightness and then left to right by hue), you will have to poke around in the code. The relevant lights all begin with:
+
+        # Change Me:
+
+6. Your final output will be saved as `collage.jpg`.
 
 ## Notes
 
-Occasionally, there might be duplicate albums, especially when it comes to deluxe versions of albums.
+Occasionally, there might be duplicate albums covers. This mainly occurs when there exists both a regular and deluxe version of album.
 
 In order to get left and right sorting, you will have to poke around in the code. It is mostly a matter of uncommenting and commenting lines.
 

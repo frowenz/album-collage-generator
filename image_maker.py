@@ -44,9 +44,9 @@ def sort_images_by_X (images, X):
     if X == 'brightness':
         images_with_X = [(image, calculate_average_brightness_inverted(image)) for image in images]
     elif X == 'saturation':
-        images_with_X = [(image, calculate_average_hue(image)) for image in images]
-    elif X == 'hue':
         images_with_X = [(image, calculate_average_saturation(image)) for image in images]
+    elif X == 'hue':
+        images_with_X = [(image, calculate_average_hue(image)) for image in images]
     else:
         print(f"Did not recognize {X} as a sorting criteria. Options are 'brightness', 'saturation', and 'hue'.")
         sys.exit()
@@ -176,9 +176,9 @@ def create_collage(images, num_album_covers_width, num_album_covers_height, dime
     # Get the sorted list of midpoints distances
     midpoints_distances = calculate_distance_to_center(dimension, num_album_covers_width, num_album_covers_height,)
 
-    # Comment the line above and uncomment the lines below to sort by distance to a side
+    # CHANGE ME: Comment the line above and uncomment the two lines below to sort by distance to a side
     # side = "top"
-    # midpoints_distances = calculate_distance_to_side(width, num_album_covers_width, num_album_covers_height, side)
+    # midpoints_distances = calculate_distance_to_side(dimension, num_album_covers_width, num_album_covers_height, side)
     
     # Paste each image into the collage at the corresponding midpoint
     for idx, (midpoint, distance) in enumerate(midpoints_distances):
@@ -195,11 +195,11 @@ def create_collage(images, num_album_covers_width, num_album_covers_height, dime
 
 # Sorts along two axises
 def create_collage_double_sorted(images, num_album_covers_width, num_album_covers_height, dimension):
-    # Change these values
-    first_sort_criteria = "hue"
-    second_sort_criteria = "saturation"
-    first_sort_direction = "top"
-    second_sort_direction = "left"
+    # CHANGE ME: These are the parameters for the double sort
+    first_sort_criteria = "saturation"
+    second_sort_criteria = "hue"
+    first_sort_direction = "left"
+    second_sort_direction = "top"
 
     images = sort_images_by_X(images, first_sort_criteria)
     
@@ -239,7 +239,7 @@ global reverse
 def main(argv):
     global reverse
     reverse = False
-    sort_criteria = "hue"
+    sort_criteria = "brightness"
     image_dimension = 64 # default image dimension
 
      # Check if arguments are passed
@@ -279,11 +279,11 @@ def main(argv):
     if (exact_albums_needed) > len(images):
         images = images[:exact_albums_needed]
 
-    # sorted_images = sort_images_by_X(images, sort_criteria)
-    # create_collage(sorted_images, num_album_covers_width, num_album_covers_height, image_dimension)
+    sorted_images = sort_images_by_X(images, sort_criteria)
+    create_collage(sorted_images, num_album_covers_width, num_album_covers_height, image_dimension)
 
-    # In order to sort along two axises, uncomment this following line and comment the line above
-    create_collage_double_sorted(images, num_album_covers_width, num_album_covers_height, image_dimension)
+    # CHANGE ME: Comment the two line above and uncomment the line below to sort along two axises (double sort)
+    # create_collage_double_sorted(images, num_album_covers_width, num_album_covers_height, image_dimension)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
