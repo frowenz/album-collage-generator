@@ -1,9 +1,17 @@
 ## Description
 
-This is the product of a MAAD 26210 assignement where we were instructed to create art from data about ourselves. Using the Spotify API, ``album_cover_fetch.py`` retrieves unique album covers from every track in a csv file. The album covers are then sorted based on brightness and placed accordingly in ``image_maker.py``.
+This is the product of a MAAD 26210 assignement where we were instructed to create art from data about ourselves. Using the Spotify API, ``album_cover_fetch.py`` retrieves unique album covers from every track in a csv file. The album covers are then sorted based on brightness, saturation, hue (or some combination) and placed accordingly in ``image_maker.py``. Here is the final image that I submitted for class:
 
 <p align="center">
   <img src="default.jpg" alt="collage" width="500">
+</p>
+
+A couple more examples: 
+<p align="center">
+  <img src="more_examples/hue_then_brightness.jpg" alt="collage" width="200">&nbsp;&nbsp; 
+  <img src="more_examples/hue_reversed.jpg" alt="collage" width="200">&nbsp;&nbsp; 
+  <img src="more_examples/saturation_reversed.jpg" alt="collage" width="200">&nbsp;&nbsp; 
+  <img src="more_examples/saturation_then_hue.jpg" alt="collage" width="200">&nbsp;&nbsp; 
 </p>
 
 ## Spotify API Keys
@@ -58,7 +66,9 @@ To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API k
 ## Future Plans and Notes
 
 I plan on adding support for different outputs dimensions so wallpapers can be produced.
--
+
 I might add support for placing smaller pictures so they create a mosiac of an input larger picture.
 
 Occasionally, there might be duplicate albums, especially when it comes to deluxe versions of albums.
+
+In order to get left and right sorting, you will have to poke around in the code. It is mostly a matter of uncommenting and commenting lines.
