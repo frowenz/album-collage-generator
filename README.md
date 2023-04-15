@@ -8,10 +8,10 @@ This is the product of a MAAD 26210 assignement where we were instructed to crea
 
 A couple more examples: 
 <p align="center">
-  <img src="more_examples/hue_then_brightness.jpg" alt="collage" width="200">&nbsp;&nbsp; 
-  <img src="more_examples/hue_reversed.jpg" alt="collage" width="200">&nbsp;&nbsp; 
-  <img src="more_examples/saturation_reversed.jpg" alt="collage" width="200">&nbsp;&nbsp; 
-  <img src="more_examples/saturation_then_hue.jpg" alt="collage" width="200">&nbsp;&nbsp; 
+  <img src="more_examples/hue_then_brightness.jpg" alt="collage" width="175">&nbsp;&nbsp; 
+  <img src="more_examples/hue_reversed.jpg" alt="collage" width="175">&nbsp;&nbsp; 
+  <img src="more_examples/saturation_reversed.jpg" alt="collage" width="175">&nbsp;&nbsp; 
+  <img src="more_examples/saturation_then_hue.jpg" alt="collage" width="175">&nbsp;&nbsp; 
 </p>
 
 ## Spotify API Keys
@@ -62,13 +62,15 @@ To use this ``album_cover_fetch.py``, you'll need to have your own Spotify API k
 
 5. Your final output will be saved as `collage.jpg`.
 
+## Notes
 
-## Future Plans and Notes
+Occasionally, there might be duplicate albums, especially when it comes to deluxe versions of albums.
+
+In order to get left and right sorting, you will have to poke around in the code. It is mostly a matter of uncommenting and commenting lines.
+
+## Future Plans
 
 I plan on adding support for different outputs dimensions so wallpapers can be produced.
 
 I might add support for placing smaller pictures so they create a mosiac of an input larger picture.
 
-Occasionally, there might be duplicate albums, especially when it comes to deluxe versions of albums.
-
-In order to get left and right sorting, you will have to poke around in the code. It is mostly a matter of uncommenting and commenting lines.
