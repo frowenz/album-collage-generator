@@ -6,7 +6,7 @@ This is the product of a MAAD 26210 assignement where we were instructed to crea
   <img src="default.jpg" alt="collage" width="500">
 </p>
 
-There are a few more examples below and even more examples here [here](/more_examples/ALL_EXAMPLES.md).
+There are a few more examples below and even more example [here](/more_examples/ALL_EXAMPLES.md).
 <p align="center">
   <img src="more_examples/hue_then_brightness.jpg" alt="collage" width="175">&nbsp;&nbsp; 
   <img src="more_examples/hue_reversed.jpg" alt="collage" width="175">&nbsp;&nbsp; 
