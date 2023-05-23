@@ -71,3 +71,7 @@ To use `album_cover_fetch.py`, you'll need to have your own Spotify API keys (cl
         CLIENT_SECRET=your_client_secret_here
 
     The script will automatically load the client ID and secret key from the `.env` file.
+
+### Future Work
+
+The biggest thing that needs to be fixed is the presenc of duplicate duplicate albums covers. This most often occurs when there are deluxe and regular albums or when single has the same cover as an album. Help with this problem would be appreciated. 
