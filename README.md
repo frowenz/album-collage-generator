@@ -15,9 +15,9 @@ Click [here](/more_examples/ALL_EXAMPLES.md) to see all examples.
 
 This is the product of a MAAD 26210 assignement where we were instructed to create art from data about ourselves. I used my Last.fm to data to pull the album covers from every song I have listened to over the past few years and then arranged them based on saturation, hue, and brightness.
 
-### How To Use
+### How To Use 
 
-1.  Download dependencies:
+1.  Make sure you have [python](https://www.python.org/downloads/) installed. Download dependencies by running this command in a terminal window:
 
         pip3 install pillow requests python-dotenv
 
