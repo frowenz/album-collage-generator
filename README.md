@@ -65,7 +65,7 @@ To use `album_cover_fetch.py`, you'll need to have your own Spotify API keys (cl
 
 3.  After creating the app, you'll find the "Client ID" and "Client Secret" on the application's dashboard.
 
-4.  Create a `.env` file in the project directory and add your client ID and secret key:
+4.  [Create](https://stackoverflow.com/questions/55131104/how-to-create-environment-variable-file-with-touch-env-for-configuration-in#:~:text=If%20you%20have%20a%20Unix,env%20to%20hold%20configuration%20information) a `.env` file in the project directory and add your client ID and secret key:
 
         CLIENT_ID=your_client_id_here
         CLIENT_SECRET=your_client_secret_here
