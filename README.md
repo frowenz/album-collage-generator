@@ -49,7 +49,7 @@ This is the product of a MAAD 26210 assignement where we were instructed to crea
 
     If `--reverse` is specified, the images will be sorted in descending order.
 
-    By default, the images are arranged in a circular formation. If you want to arrange them from side to side or to double sort them (e.g., sort top to bottom by brightness and then left to right by hue), you will have to poke around in the code. The relevant lights all begin with:
+    By default, the images are arranged in a circular formation. If you want to arrange them from side to side or to double sort them (e.g., sort top to bottom by brightness and then left to right by hue), you will have to poke around in the code. The relevant lines all begin with:
 
         # Change Me:
 
