@@ -13,7 +13,9 @@
 
 Click [here](/more_examples/ALL_EXAMPLES.md) to see all examples.
 
-This is the product of a MAAD 26210 assignement where we were instructed to create art from data about ourselves. I used my Last.fm to data to pull the album covers from every song I have listened to over the past few years and then arranged them based on saturation, hue, and brightness.
+This is the product of a MAAD 26210 assignement where we were instructed to create art from data about ourselves. I used my Last.fm data to pull the album covers from every song I have listened to over the past few years and then arranged them based on saturation, hue, and brightness.
+
+---
 
 ### How To Use 
 
@@ -74,4 +76,4 @@ To use `album_cover_fetch.py`, you'll need to have your own Spotify API keys (cl
 
 ### Future Work
 
-The biggest thing that needs to be fixed is the presence of duplicate duplicate albums covers. This most often occurs when there are deluxe and regular albums or when single has the same cover as an album. Help with this problem would be appreciated. 
+The biggest thing that needs to be fixed is the presence of duplicate duplicate albums covers. This most often occurs when there are deluxe and regular albums or when a single has the same cover as an album.
